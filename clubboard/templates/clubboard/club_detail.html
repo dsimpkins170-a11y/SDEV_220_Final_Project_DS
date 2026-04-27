@@ -16,12 +16,14 @@
         <p>{{ club.start_time }} - {{ club.end_time }} </br></p>
         <p>{{ club.location|linebreaksbr }}</p>
         <p>{{ club.description|linebreaksbr }}</p>
-        <a href="{% url 'post_new' club.pk %}" class="my-link">
-            + Add Comment
-            {% include './icons/file-earmark-plus.svg' %}
-        </a>
+        <div>
+            <a href="{% url 'post_new' club.pk %}" class="my-link">
+                + Add Comment
+            </a>
+        </div>
         {% for post in posts %}
-            <div>
+            </br>
+            <div class="outlined">
                 <p>{{ post.text }}</p>
                 <small>By {{ post.authors }} on {{ post.created_date }}</small>
             </div>

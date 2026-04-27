@@ -6,4 +6,5 @@ urlpatterns = [
     path('posts/', views.post_list, name='post_list'),
     path('club/<int:pk>/', views.club_detail, name='club_detail'),
     path('club/<int:club_pk>/post/new/', views.post_new, name='post_new'),
+    path('filter', views.filter, name='filter'),
 ]   

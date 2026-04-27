@@ -37,3 +37,6 @@ def post_new(request, club_pk):
     else:
         form = PostForm()
     return render(request, 'clubboard/post_edit.html', {'form': form})
+
+def filter(request):
+    return render(request, 'clubboard/filter.html', {})
